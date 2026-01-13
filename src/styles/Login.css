@@ -40,12 +40,12 @@
   font-weight: bold;
   line-height: 1;
   cursor: pointer;
-  color: #000000;                 /* WHITE like footer icons */
+  color: #ffffff;                 /* WHITE like footer icons */
   transition: all 0.25s ease;
 }
 
 .close-btn:hover {
-  color: #ff9933;                 /* SAME orange as footer hover */
+  color: #000000;                 /* SAME orange as footer hover */
   transform: translateY(-1px);
 }
 
