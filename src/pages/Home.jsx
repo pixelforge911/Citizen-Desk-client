@@ -4,6 +4,7 @@ import MobileNumberModal from "../components/Home/MobileNumberModal";
 import LoginModal from "../components/common/LoginModal";
 import FeedbackModal from "../components/common/FeedbackModal";
 import VroLogin from "./VroLogin";
+import menubar from "../assets/menubar.png"
 
 function Home() {
   const [showTrackPopup, setShowTrackPopup] = useState(false);
@@ -61,7 +62,7 @@ function Home() {
               className="btn d-lg-none text-white fs-3 p-0"
               onClick={() => setShowMobileMenu(true)}
             >
-              <img src="/src/assets/menubar.png" alt="Menu" className="w-100 h-70" style={{ width: 35, height: 35 }} />
+              <img src={menubar} alt="Menu" className="w-100 h-70" style={{ width: 35, height: 35 }} />
             </button>
 
             <Link to="/" className="text-decoration-none d-flex align-items-center">
