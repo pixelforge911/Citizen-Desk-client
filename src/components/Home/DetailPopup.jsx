@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/DetailPopup.css";
+import "../../styles/Detailpopup.css";
 import axios from "axios";
 
 function DetailPopup({ item, onClose }) {
