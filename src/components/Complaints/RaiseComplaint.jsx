@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { locationData } from "../../data/locations";
 import axios from "axios";
 
+
 const primary = "#0b3c5d";
 
 function RaiseComplaint() {
@@ -50,7 +51,7 @@ function RaiseComplaint() {
 
     try {
       const authRes = await fetch(
-        "http://localhost:5000/api/auth/ik-auth"
+        `${import.meta.env.VITE_API_BASE_URL}/api/auth/ik-auth`
       );
       const auth = await authRes.json();
 
@@ -103,7 +104,7 @@ function RaiseComplaint() {
     try {
       /* ---------- STEP 1: CREATE COMPLAINT ---------- */
       const raiseRes = await axios.post(
-        "http://localhost:5000/api/complaints/raise",
+        `${import.meta.env.VITE_API_BASE_URL}/api/complaints/raise`,
         {
           ...formData,
           imageUrl: uploadedImageUrl,
@@ -120,12 +121,12 @@ function RaiseComplaint() {
       /* ---------- STEP 2: ANALYZE IMAGE ---------- */
       try {
         const analyzeRes = await axios.post(
-          "http://localhost:5000/api/complaints/analyze-image",
+          `${import.meta.env.VITE_API_BASE_URL}/api/complaints/analyze-image`,
           { imageUrl }
         );
 
         await axios.put(
-          `http://localhost:5000/api/complaints/update-ai-data/${_id}`,
+          `${import.meta.env.VITE_API_BASE_URL}/api/complaints/update-ai-data/${_id}`,
           analyzeRes.data
         );
       } catch (aiErr) {

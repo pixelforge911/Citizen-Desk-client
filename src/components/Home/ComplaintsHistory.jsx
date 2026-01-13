@@ -49,7 +49,7 @@ function History() {
       <h2 className="fw-bold mb-4 border-bottom pb-2">My Reports ({mobile})</h2>
       
       {loading ? (
-        <div className="text-center">Loading your reports...</div>
+        <div className="text-center">Loading your reports...please wait</div>
       ) : complaints.length === 0 ? (
         <div className="alert alert-light text-center border shadow-sm">
           No reports found for this number.
