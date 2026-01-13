@@ -9,7 +9,7 @@ function FeedbackModal({ onClose }) {
     e.preventDefault();
     try {
       // Send feedback to the backend
-      await API.post("/complaints/feedback", { email, feedback }); 
+      await API.post("/feedback/submit-feedback", { email, feedback }); 
       alert("Thank you for your feedback!");
       onClose();
     } catch (error) {

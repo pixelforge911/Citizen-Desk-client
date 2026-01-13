@@ -40,7 +40,7 @@
   font-weight: bold;
   line-height: 1;
   cursor: pointer;
-  color: #ffffff;                 /* WHITE like footer icons */
+  color: #000000;                 /* WHITE like footer icons */
   transition: all 0.25s ease;
 }
 

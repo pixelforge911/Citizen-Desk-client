@@ -47,7 +47,7 @@ function VroLogin({ onLogin, onClose }) {
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Password (1888066)"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />

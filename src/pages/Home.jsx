@@ -113,7 +113,7 @@ function Home() {
                       className="rounded-circle"
                       style={{ width: 35, height: 35 }}
                     />
-                    <span>Hello, Govt Officer ▾</span>
+                    <span className="text-white">Hello, Govt Officer ▾</span>
                   </button>
 
                   {showProfileMenu && (
