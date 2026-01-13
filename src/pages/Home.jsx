@@ -5,6 +5,7 @@ import LoginModal from "../components/common/LoginModal";
 import FeedbackModal from "../components/common/FeedbackModal";
 import VroLogin from "./VroLogin";
 import menubar from "../assets/menubar.png"
+import officericon from "/src/assets/officer.png"
 
 function Home() {
   const [showTrackPopup, setShowTrackPopup] = useState(false);
@@ -109,7 +110,7 @@ function Home() {
                     onClick={() => setShowProfileMenu((p) => !p)}
                   >
                     <img
-                      src="/src/assets/officer.png"
+                      src={officericon}
                       alt="Profile"
                       className="rounded-circle"
                       style={{ width: 35, height: 35 }}
