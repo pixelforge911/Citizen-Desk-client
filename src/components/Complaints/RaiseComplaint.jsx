@@ -104,7 +104,7 @@ function RaiseComplaint() {
     try {
       /* ---------- STEP 1: CREATE COMPLAINT ---------- */
       const raiseRes = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/api/complaints/raise`,
+        `${import.meta.env.VITE_API_BASE_URL}/complaints/raise`,
         {
           ...formData,
           imageUrl: uploadedImageUrl,
@@ -121,12 +121,12 @@ function RaiseComplaint() {
       /* ---------- STEP 2: ANALYZE IMAGE ---------- */
       try {
         const analyzeRes = await axios.post(
-          `${import.meta.env.VITE_API_BASE_URL}/api/complaints/analyze-image`,
+          `${import.meta.env.VITE_API_BASE_URL}/complaints/analyze-image`,
           { imageUrl }
         );
 
         await axios.put(
-          `${import.meta.env.VITE_API_BASE_URL}/api/complaints/update-ai-data/${_id}`,
+          `${import.meta.env.VITE_API_BASE_URL}/complaints/update-ai-data/${_id}`,
           analyzeRes.data
         );
       } catch (aiErr) {
