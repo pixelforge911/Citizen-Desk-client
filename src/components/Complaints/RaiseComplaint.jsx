@@ -51,7 +51,7 @@ function RaiseComplaint() {
 
     try {
       const authRes = await fetch(
-        `${import.meta.env.VITE_API_BASE_URL}/api/auth/ik-auth`
+        `${import.meta.env.VITE_API_BASE_URL}/auth/ik-auth`
       );
       const auth = await authRes.json();
 
