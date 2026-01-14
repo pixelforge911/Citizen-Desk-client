@@ -29,7 +29,7 @@ function DetailPopup({ item, onClose }) {
     try {
       setSubmitting(true);
       await axios.put(
-        `http://localhost:5000/api/complaints/update-user-feedback/${item._id}`,
+        `${import.meta.env.VITE_API_BASE_URL}/complaints/update-user-feedback/${item._id}`,
         { resolutionStatus: type }
       );
       setUserResponse(type);
